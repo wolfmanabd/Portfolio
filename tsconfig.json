@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/ThemeProvider.jsxder.jsx", "components/Navbar.jsx"  ],
   "exclude": ["node_modules"]
 }
