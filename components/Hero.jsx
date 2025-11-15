@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
-export default function Hero(){
+export default function Hero() {
   return (
     <section className="relative w-full min-h-[98vh] flex items-center">
       <div className="absolute inset-0 -z-20">
@@ -23,14 +23,25 @@ export default function Hero(){
 
       <div className="container relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center py-12">
-          <motion.div initial={{x:-30, opacity:0}} animate={{x:0,opacity:1}} transition={{duration:0.9}}>
+          <motion.div
+            initial={{ x: -30, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.9 }}
+          >
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-              Hi, I'm <span style={{color:"var(--primary)"}}>Abdullahi Akinyoola</span>
+              Hi, I`m{" "}
+              <span style={{ color: "var(--primary)" }}>
+                Abdullahi Akinyoola
+              </span>
             </h1>
 
             <h2 className="text-xl md:text-2xl text-gray-300 mb-6">
               <Typewriter
-                words={["Frontend Developer", "Graphics Designer", "UI/UX Enthusiast"]}
+                words={[
+                  "Frontend Developer",
+                  "Graphics Designer",
+                  "UI/UX Enthusiast",
+                ]}
                 loop={0}
                 cursor
                 cursorStyle="|"
@@ -46,24 +57,38 @@ export default function Hero(){
             </p>
 
             <div className="flex gap-4">
-              <a href="#portfolio" className="px-4 py-2 rounded-md" style={{background:"var(--primary)", color:"#fff"}}>View Portfolio</a>
-              <a href="#contact" className="px-4 py-2 rounded-md border border-white/10 text-white/90">Contact</a>
+              <a
+                href="#portfolio"
+                className="px-4 py-2 rounded-md"
+                style={{ background: "var(--primary)", color: "#fff" }}
+              >
+                View Portfolio
+              </a>
+              <a
+                href="#contact"
+                className="px-4 py-2 rounded-md border border-white/10 text-white/90"
+              >
+                Contact
+              </a>
             </div>
           </motion.div>
 
-          {/* <motion.div initial={{scale:0.9, opacity:0}} animate={{scale:1, opacity:1}} transition={{duration:1}}>
-            <div className="w-full flex justify-center">
-              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 card overflow-hidden shadow-2xl border-4" style={{borderColor:"var(--primary)"}}>
-                <Image
-                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80"
-                  alt="portrait placeholder"
-                  width={800}
-                  height={800}
-                  className="object-cover w-full h-full"
-                />
-              </div>
+          {/* RIGHT PROFILE IMAGE — Slide from Right */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+            className="flex justify-center"
+          >
+            <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-xl overflow-hidden shadow-xl">
+              <Image
+                src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?q=80&w=1200&auto=format"
+                alt="Developer portrait"
+                fill
+                className="object-cover"
+              />
             </div>
-          </motion.div> */}
+          </motion.div>
         </div>
       </div>
     </section>
