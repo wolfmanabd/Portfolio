@@ -52,7 +52,7 @@ export default function Hero() {
             </h2>
 
             <p className="text-gray-300 max-w-lg mb-6">
-              I build modern, accessible, and stunning interfaces — bridging
+              I build modern, accessible, and stunning interfaces bridging
               design and code to produce delightful user experiences.
             </p>
 
