@@ -1,47 +1,64 @@
-import { FaReact, FaHtml5, FaCss3Alt, FaGithub } from "react-icons/fa";
-import { 
-  SiNextdotjs, SiTailwindcss, SiJavascript, SiTypescript, 
-  SiRedux, SiVite, SiMongodb, SiBootstrap, SiFigma, 
-  SiCanva, SiCoreldraw 
-} from "react-icons/si";
+"use client";
+
+import { motion } from "framer-motion";
 
 const skills = [
-  { name: "React", icon: <FaReact className="text-[#61DAFB] text-6xl" />, category: "Frontend" },
-  { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white text-6xl" />, category: "Frontend" },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4] text-6xl" />, category: "Frontend" },
-  { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E] text-6xl" />, category: "Frontend" },
-  { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6] text-6xl" />, category: "Frontend" },
-  { name: "HTML5", icon: <FaHtml5 className="text-[#E34F26] text-6xl" />, category: "Frontend" },
-  { name: "CSS3", icon: <FaCss3Alt className="text-[#1572B6] text-6xl" />, category: "Frontend" },
-  { name: "Redux", icon: <SiRedux className="text-[#764ABC] text-6xl" />, category: "Frontend" },
-  { name: "Vite", icon: <SiVite className="text-[#646CFF] text-6xl" />, category: "Frontend" },
-  { name: "MongoDB", icon: <SiMongodb className="text-[#47A248] text-6xl" />, category: "Backend" },
-  { name: "Bootstrap", icon: <SiBootstrap className="text-[#7952B3] text-6xl" />, category: "Frontend" },
-  { name: "ShadCN UI", icon: <SiNextdotjs className="text-black dark:text-white text-6xl" />, category: "Frontend" },
-  { name: "Mantine", icon: <FaReact className="text-[#339AF0] text-6xl" />, category: "Frontend" },
-  { name: "Figma", icon: <SiFigma className="text-[#F24E1E] text-6xl" />, category: "Design" },
-  { name: "Canva", icon: <SiCanva className="text-[#00C4CC] text-6xl" />, category: "Design" },
-  { name: "CorelDRAW", icon: <SiCoreldraw className="text-[#F4A900] text-6xl" />, category: "Design" },
-  { name: "GitHub", icon: <FaGithub className="text-black dark:text-white text-6xl" />, category: "Other" },
+  { name: "HTML", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "CSS", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+  { name: "JavaScript", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "TypeScript", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "React", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Next.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+
+  // new icons
+  { name: "Tailwind CSS", src: "https://www.svgrepo.com/show/374118/tailwind.svg" },
+  { name: "MongoDB", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "WordPress", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" },
+  { name: "Bootstrap", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" },
+  { name: "Canva", src: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/canva.svg" },
+
+  // others
+  { name: "Git", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "Figma", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
 ];
 
 export default function Skills() {
   return (
-    <section className="py-16">
-      {/* Section Header */}
-      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-        Tools I Work With
-      </h2>
-
-      {/* Skills Grid */}
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-10 justify-items-center">
-        {skills.map((skill) => (
-          <div key={skill.name} className="flex flex-col items-center">
-            {skill.icon}
-            <span className="mt-2 text-center font-semibold">{skill.name}</span>
-          </div>
-        ))}
+    <section id="skills" className="py-28 container mx-auto px-6">
+      <div className="text-center my-16">
+        <h2 className="text-3xl md:text-4xl font-bold" style={{ color: "var(--text)" }}>
+          Skills & Tools
+        </h2>
+        <p className="mt-4 text-lg" style={{ color: "var(--muted)" }}>
+          Here are the technologies and tools I work with:
+        </p>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-10"
+      >
+        {skills.map((s) => (
+          <motion.div
+            key={s.name}
+            whileHover={{ scale: 1.06 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="flex flex-col items-center gap-3 p-4 bg-[var(--card)] rounded-xl shadow hover:shadow-lg duration-300"
+          >
+            <div className="w-16 h-16 flex items-center justify-center">
+              {/* local img tag ensures SVG loads without next/image CORS issues */}
+              <img src={s.src} alt={s.name} className="max-w-full max-h-full object-contain" />
+            </div>
+
+            <p className="font-medium" style={{ color: "var(--text)" }}>
+              {s.name}
+            </p>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 }

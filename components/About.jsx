@@ -56,7 +56,7 @@ export default function About() {
             </span>
             , a passionate <strong>Frontend Developer</strong> and{" "}
             <strong>Graphics Designer</strong> who builds visually stunning and
-            user-friendly digital experiences.
+            user friendly digital experiences.
           </p>
 
           <p
@@ -65,7 +65,7 @@ export default function About() {
           >
             I specialize in creating modern, responsive, and interactive
             interfaces using frontend tools. I love transforming ideas into
-            real-world, polished solutions.
+            real world, polished solutions.
           </p>
 
           <p
