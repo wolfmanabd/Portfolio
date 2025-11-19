@@ -1,8 +1,7 @@
-// app/page.jsx
+
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
-// import Resume from "@/components/Resume";
 import Services from "@/components/Services";
 import CTA from "@/components/CTA";
 import Portfolio from "@/components/Portfolio";

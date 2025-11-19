@@ -28,7 +28,7 @@ export default function About() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="relative w-full h-[420px] md:h-[520px] rounded-xl overflow-hidden shadow-xl">
+          <div className="hidden md:block relative w-full h-[420px] md:h-[520px] rounded-xl overflow-hidden shadow-xl">
             <Image
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1400&auto=format"
               alt="Developer illustration"

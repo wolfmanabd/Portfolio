@@ -1,6 +1,4 @@
-// components/Hero.jsx
 "use client";
-
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
@@ -18,8 +16,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* subtle gradient overlay */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/60 to-black/40"></div>
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/40 to-black/90"></div>
 
       <div className="container relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center py-12">

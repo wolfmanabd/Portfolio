@@ -7,7 +7,7 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className="p-2 rounded-full bg-[var(--primary)] text-white hover:opacity-80 transition"
+      className="p-2 rounded-full bg-(--primary) text-white hover:opacity-80 transition"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? <FiSun size={20} /> : <FiMoon size={20} />}

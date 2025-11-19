@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-[var(--bg)] border-b border-white/10 shadow-md transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-(--bg) border-b border-white/10 shadow-md transition-all duration-300 ${
         shrink ? "py-3" : "py-6"
       }`}
     >
@@ -45,12 +45,12 @@ export default function Navbar() {
             shrink ? "text-xl" : "text-2xl"
           }`}
         >
-          <span className="text-white">W</span>
+          <span className="text-(--primary)">W</span>
           <span
             className="ml-[-3px]"
             style={{ color: "var(--primary)" }}
           >
-            Dev
+            .Dev
           </span>
         </Link>
 
@@ -64,7 +64,7 @@ export default function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              className="transition text-[var(--text)] hover:text-white"
+              className="transition text-(--text) hover:text-white"
             >
               {item.name}
             </a>
@@ -90,7 +90,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-3xl text-[var(--text)]"
+          className="md:hidden text-3xl text-(--text)"
           onClick={() => setOpen(!open)}
         >
           {open ? "✕" : "☰"}
@@ -104,7 +104,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden bg-[var(--bg)] border-b border-white/10 shadow-lg"
+            className="md:hidden bg-(--bg) border-b border-white/10 shadow-lg"
           >
             <div className="flex flex-col items-center p-6 space-y-6 text-lg font-medium">
               {navItems.map((item) => (
@@ -112,7 +112,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="text-[var(--text)] hover:text-white transition"
+                  className="text-(--text) hover:text-white transition"
                 >
                   {item.name}
                 </a>
