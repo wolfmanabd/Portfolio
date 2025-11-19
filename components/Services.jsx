@@ -59,7 +59,7 @@ export default function Services() {
             }}
 
             className="p-6 rounded-2xl border  dark:bg-neutral-900 
-                       dark:border-neutral-800 
+                       border-neutral-700 dark:border-neutral-800 
                        hover:border-primary transition-all shadow-sm"
           >
             <div className="mb-4 text-white">{service.icon}</div>

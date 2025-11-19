@@ -78,7 +78,7 @@ export default function Portfolio() {
     /* Dark mode neon glass */
     dark:bg-white/10 dark:hover:bg-white/20
   `}
-            whileHover={{ rotateX: 4, rotateY: -4, scale: 1.03 }} 
+            whileHover={{ rotateX: 4, rotateY: -4, scale: 1.03 }}
           >
             <div
               className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none 
@@ -88,7 +88,6 @@ export default function Portfolio() {
             ></div>
 
             <div className="relative rounded-2xl overflow-hidden bg-neutral-900/90 dark:bg-neutral-900/60">
-
               <div className="relative w-full h-48 overflow-hidden">
                 <Image
                   src={screenshotUrl(p.link)}
@@ -100,7 +99,6 @@ export default function Portfolio() {
               </div>
 
               <div className="p-5 space-y-3">
-
                 <h4
                   className="font-bold text-xl text-black dark:text-white tracking-wide
                      transition duration-300 group-hover:text-primary"
