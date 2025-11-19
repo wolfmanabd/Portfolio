@@ -78,9 +78,8 @@ export default function Portfolio() {
     /* Dark mode neon glass */
     dark:bg-white/10 dark:hover:bg-white/20
   `}
-            whileHover={{ rotateX: 4, rotateY: -4, scale: 1.03 }} // 3D tilt
+            whileHover={{ rotateX: 4, rotateY: -4, scale: 1.03 }} 
           >
-            {/* Animated Border Light Sweep */}
             <div
               className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none 
                   bg-linear-to-r from-transparent via-white/40 to-transparent
@@ -88,9 +87,8 @@ export default function Portfolio() {
                   animate-[shine_1.4s_ease-in-out]"
             ></div>
 
-            {/* CARD BODY */}
             <div className="relative rounded-2xl overflow-hidden bg-neutral-900/90 dark:bg-neutral-900/60">
-              {/* IMAGE */}
+
               <div className="relative w-full h-48 overflow-hidden">
                 <Image
                   src={screenshotUrl(p.link)}
@@ -98,12 +96,11 @@ export default function Portfolio() {
                   fill
                   className="object-cover transition-all duration-700 group-hover:scale-110"
                 />
-                {/* Dark Overlay for Google Fonts */}
                 <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
               </div>
 
               <div className="p-5 space-y-3">
-                {/* TITLE */}
+
                 <h4
                   className="font-bold text-xl text-black dark:text-white tracking-wide
                      transition duration-300 group-hover:text-primary"
@@ -111,13 +108,11 @@ export default function Portfolio() {
                   {p.name}
                 </h4>
 
-                {/* SUB TEXT */}
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
                   A modern, responsive UI built with polished layout, smooth
                   transitions, and performance-first best practices.
                 </p>
 
-                {/* TAGS */}
                 <div className="flex flex-wrap gap-2 mt-2">
                   {["React", "UI", "Frontend"].map((tag) => (
                     <span

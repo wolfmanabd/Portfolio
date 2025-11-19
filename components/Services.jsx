@@ -21,7 +21,7 @@ export default function Services() {
       title: "Responsive & Mobile-Friendly Design",
       icon: <Smartphone size={40} />,
       description:
-        "I ensure your website looks amazing on all devices — desktops, tablets, and smartphones — using responsive layouts, adaptive grids, and mobile-first design strategies.",
+        "I ensure your website looks amazing on all devices desktops, tablets, and smartphones using responsive layouts, adaptive grids, and mobile-first design strategies.",
     },
     {
       title: "Backend / API Integration",
@@ -58,8 +58,8 @@ export default function Services() {
               borderColor: "var(--primary)",
             }}
 
-            className="p-6 rounded-2xl border bg-neutral-900 dark:bg-neutral-900 
-                       border-neutral-700 dark:border-neutral-800 
+            className="p-6 rounded-2xl border  dark:bg-neutral-900 
+                       dark:border-neutral-800 
                        hover:border-primary transition-all shadow-sm"
           >
             <div className="mb-4 text-white">{service.icon}</div>

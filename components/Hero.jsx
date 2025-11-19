@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[98vh] flex items-center">
-      <div className="absolute inset-0 -z-20">
+    <section className="relative w-full min-h-[108vh] flex items-center">
+      <div className="absolute inset-0 -z-10">
         <Image
           src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
           alt="tech background"
           fill
-          className="object-cover"
+          className="object-cover  opacity-70"
           priority
         />
       </div>
@@ -70,7 +70,6 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* RIGHT PROFILE IMAGE — Slide from Right */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
