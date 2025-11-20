@@ -33,7 +33,7 @@ export default function Services() {
       title: "WordPress Development",
       icon: <Globe size={40} />,
       description:
-        "I build and customize WordPress websites, themes, and pages — ensuring fast performance, SEO-friendly structure, and clean modern layouts tailored to your brand.",
+        "I build and customize WordPress websites, themes, and pages ensuring fast performance, SEO-friendly structure, and clean modern layouts tailored to your brand.",
     },
   ];
 
@@ -58,17 +58,16 @@ export default function Services() {
               borderColor: "var(--primary)",
             }}
 
-            className="p-6 rounded-2xl border  dark:bg-neutral-900 
-                       border-neutral-700 dark:border-neutral-800 
-                       hover:border-primary transition-all shadow-sm"
+            className="p-6 rounded-4xl  bg-(--background) 
+                       hover:border-primary transition-all shadow-lg border border-(--secondary)"
           >
-            <div className="mb-4 text-white">{service.icon}</div>
+            <div className="mb-4  text-(--text)">{service.icon}</div>
 
-            <h3 className="text-xl font-semibold mb-2 text-white">
+            <h3 className="text-xl font-semibold mb-2 text-(--text)">
               {service.title}
             </h3>
 
-            <p className="text-neutral-300 leading-relaxed text-sm">
+            <p className="text-(--text) leading-relaxed text-sm">
               {service.description}
             </p>
           </motion.div>

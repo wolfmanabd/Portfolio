@@ -67,46 +67,41 @@ export default function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
+             whileHover={{
+              scale: 1.05,
+              boxShadow: "0 0 20px var(--primary)",
+              borderColor: "var(--primary)",
+            }}
             className={`
     group relative rounded-2xl overflow-hidden
-    p-0.5 transition-all duration-500
-
-    /* Light mode glass look */
-    bg-white/10 backdrop-blur-lg
-    hover:bg-white/20
-
-    /* Dark mode neon glass */
-    dark:bg-white/10 dark:hover:bg-white/20
+    p-0.5 transition-all duration-500 bg-(--card) 
+                       hover:border-(--primary)  shadow-sm border border-(--secondary)
   `}
-            whileHover={{ rotateX: 4, rotateY: -4, scale: 1.03 }}
           >
             <div
               className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none 
-                  bg-linear-to-r from-transparent via-white/40 to-transparent
-                  dark:via-purple-500/40
-                  animate-[shine_1.4s_ease-in-out]"
+                  bg-linear-to-r "
             ></div>
 
-            <div className="relative rounded-2xl overflow-hidden bg-neutral-900/90 dark:bg-neutral-900/60">
+            <div className="relative rounded-2xl overflow-hidden bg-(--background)">
               <div className="relative w-full h-48 overflow-hidden">
                 <Image
                   src={screenshotUrl(p.link)}
                   alt={p.name}
                   fill
-                  className="object-cover transition-all duration-700 group-hover:scale-110"
+                  className="object-cover transition-all duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
               </div>
 
               <div className="p-5 space-y-3">
                 <h4
-                  className="font-bold text-xl text-black dark:text-white tracking-wide
+                  className="font-bold text-xl text-(--text) tracking-wide
                      transition duration-300 group-hover:text-primary"
                 >
                   {p.name}
                 </h4>
 
-                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                <p className="text-sm text-(--text) leading-relaxed">
                   A modern, responsive UI built with polished layout, smooth
                   transitions, and performance-first best practices.
                 </p>
@@ -116,9 +111,7 @@ export default function Portfolio() {
                     <span
                       key={tag}
                       className="px-3 py-1 rounded-full text-xs font-medium
-            bg-neutral-200 text-neutral-800
-            dark:bg-neutral-800 dark:text-neutral-200
-            group-hover:bg-primary group-hover:text-white
+            text-(--text) bg-(--secondary)/20
             transition duration-300"
                     >
                       {tag}
