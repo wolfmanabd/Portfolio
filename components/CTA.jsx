@@ -7,7 +7,7 @@ export default function CTA(){
           <h4 className="text-xl font-bold">Transform Your Vision Into Reality</h4>
           <p className="muted">Let’s build something outstanding together.</p>
         </div>
-        <a href="#contact" className="px-6 py-3 rounded-md" style={{background:"var(--primary)", color:"#fff"}}>Start Project</a>
+        <a href="#contact" className="px-6 py-3 rounded-md btn" style={{background:"var(--primary)", color:"#fff"}}>Start Project</a>
       </div>
     </section>
   );

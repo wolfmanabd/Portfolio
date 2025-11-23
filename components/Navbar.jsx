@@ -122,7 +122,7 @@ export default function Navbar() {
 
               <a
                 href="#contact"
-                className="px-5 py-3 rounded-md text-white font-medium"
+                className="px-5 py-3 rounded-md text-white font-medium "
                 style={{ background: "var(--primary)" }}
               >
                 Get in touch

@@ -38,6 +38,12 @@ const PROJECTS = [
     link: "https://gentle-kitsune-49ebb7.netlify.app",
     tags: ["UI/UX"],
   },
+  {
+    name: "Golden Star Initiative",
+    link: "https://goldenstarinitiative.ng/",
+    tags: ["WordPress"],
+  },
+  
 ];
 
 function screenshotUrl(site) {

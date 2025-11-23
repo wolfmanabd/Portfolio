@@ -56,7 +56,7 @@ export default function Hero() {
             <div className="flex gap-4">
               <a
                 href="#portfolio"
-                className="px-4 py-2 rounded-md"
+                className="px-4 py-2 rounded-md btn "
                 style={{ background: "var(--primary)", color: "#fff" }}
               >
                 View Portfolio

@@ -89,7 +89,7 @@ export default function About() {
 
           <a
             href="#services"
-            className="inline-block px-6 py-3 rounded-md text-white font-medium"
+            className="inline-block px-6 py-3 rounded-md text-white font-medium btn"
             style={{ background: "var(--primary)" }}
           >
             Explore My Services

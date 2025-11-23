@@ -14,10 +14,7 @@ import {
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="py-20 px-6  transition duration-300"
-    >
+    <section id="contact" className="py-20 px-6  transition duration-300">
       {/* Header */}
       <h2 className="text-4xl font-bold text-center text-(--text) mb-12">
         Contact Me
@@ -25,9 +22,7 @@ export default function Contact() {
 
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
         {/* LEFT SIDE: Contact Info */}
-        <div
-          className="p-8 rounded-2xl bg-(--background) transition duration-300"
-        >
+        <div className="p-8 rounded-2xl bg-(--background) transition duration-300">
           <h3 className="text-2xl font-semibold text-(--text) mb-6">
             Get In Touch
           </h3>
@@ -43,9 +38,7 @@ export default function Contact() {
               <div className="p-3 rounded-xl bg-neutral-100 dark:bg-neutral-800">
                 <Mail className="text-neutral-700 dark:text-neutral-300" />
               </div>
-              <p className="text-(--text) text-sm">
-                wolfmanabd@gmail.com
-              </p>
+              <p className="text-(--text) text-sm">wolfmanabd@gmail.com</p>
             </div>
 
             {/* Phone */}
@@ -53,9 +46,7 @@ export default function Contact() {
               <div className="p-3 rounded-xl bg-neutral-100 dark:bg-neutral-800">
                 <Phone className="text-neutral-700 dark:text-neutral-300" />
               </div>
-              <p className="text-(--text) text-sm">
-                +234 70 4831 1989
-              </p>
+              <p className="text-(--text) text-sm">+234 70 4831 1989</p>
             </div>
 
             {/* Location */}
@@ -63,9 +54,7 @@ export default function Contact() {
               <div className="p-3 rounded-xl bg-neutral-100 dark:bg-neutral-800">
                 <MapPin className="text-neutral-700 dark:text-neutral-300" />
               </div>
-              <p className="text-(--text) text-sm">
-                Sokoto, Nigeria
-              </p>
+              <p className="text-(--text) text-sm">Sokoto, Nigeria</p>
             </div>
           </div>
 
@@ -178,7 +167,7 @@ export default function Contact() {
               type="submit"
               className="w-full flex items-center justify-center gap-2 
               bg-(--secondary)text-(--text)
-              font-semibold py-3 rounded-xl hover:opacity-90 transition"
+              font-semibold py-3 rounded-xl hover:opacity-90 "
             >
               Send Message <Send size={18} />
             </button>
